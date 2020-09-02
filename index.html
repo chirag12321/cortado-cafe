@@ -45,7 +45,7 @@
             padding: 20px;
         }
         .content img{
-            background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.9)), url('2.jpg');
+            background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.9)), url(2.jpg);
             margin: 0 auto;
             height: 84vh;
             background-repeat: no-repeat;
@@ -416,6 +416,7 @@
                 top: 16%;
             }
             .main h1{
+                margin-top: 10px;
                 font-size: 23px;
             }
             .main .big{
@@ -444,6 +445,9 @@
             }
         }
         @media (max-width: 590px){
+            .main{
+                margin-left: 10px;
+            }
             .main .btn{
                 text-align: center;
                 display: inline-block;
@@ -457,17 +461,14 @@
                 position: absolute;
                 right: 0;
             }
-            .main{
-                margin-left: 10px;
+            .show-btn, .hide-btn{
+                left: 20px;
             }
             .main .btn{
                 display: grid;
                 text-align: left;
                 margin-top: 10px;
                 font-size: 14px;
-            }
-            .show-btn, .hide-btn{
-                left: 20px;
             }
             .btn{
                 position: absolute;
@@ -487,9 +488,6 @@
             }
         }
         @media (max-width: 400px){
-            .main h1{
-                    margin-top: 10px;
-                }
             .btn{
                 margin-right: 200px;
             }
@@ -498,11 +496,17 @@
             }
         }
         @media (max-width: 360px){
+            .slogan{
+                font-size: 18px;
+            }
             .btn{
                 margin-right: 160px;
             }
         }
         @media (max-width: 330px){
+            .slogan{
+                font-size: 14px;
+            }
             .btn{
                 margin-right: 140px;
             }
@@ -513,9 +517,6 @@
             }
         }
         @media (max-width: 260px){
-            .slogan{
-                font-size: 14px;
-            }
             .btn{
                 margin-right: 70px;
             }
