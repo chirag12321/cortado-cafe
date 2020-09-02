@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: darksalmon;
+}
+body h1{
+    font-size: 60px;
+}
+body p{
+    font-size: 30px;
+}
+.container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-gap: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #101820FF;
+    height: 25rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.card__name {
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+
+.card__image {
+    width: 250px;
+    height: 160px;
+    border-radius: 15px;
+    border: 5px solid #272133;
+    margin-top: 20px;
+    box-shadow: 0 10px 50px rgba(235, 25, 110, 1);
+}
+
+.draw-border {
+    box-shadow: inset 0 0 0 4px darkseagreen;
+    color: darksalmon;
+    -webkit-transition: color 0.5s 0.3s;
+    transition: color 0.5s 0.3s;
+    position: relative;
+}
+
+.draw-border::before,
+.draw-border::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    width: 0rem;
+    height: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.draw-border::before {
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+}
+
+.draw-border::after {
+    border-top-width: 4px;
+    border-right-width: 4px;
+}
+
+.draw-border:hover {
+    color: #ffe593;
+}
+
+.draw-border:hover::before,
+.draw-border:hover::after {
+    border-color: #eb196e;
+    -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+    transition: border-color 0s, width 0.25s, height 0.25s;
+    width: 100%;
+    height: 100%;
+}
+
+.draw-border:hover::before {
+    -webkit-transition-delay: 0s, 0s, 0.25s;
+    transition-delay: 0s, 0s, 0.25s;
+}
+
+.draw-border:hover::after {
+    -webkit-transition-delay: 0s, 0.25s, 0s;
+    transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1.5;
+    padding: 0.75em 2em;
+    letter-spacing: 0.05rem;
+    margin: 1em;
+    width: 13rem;
+}
+
+.btn:focus {
+    outline: 2px dotted #55d7dc;
+}
+
+@media (max-width: 2100px){
+    .container{
+        grid-template-columns: 300px 300px 300px 300px;
+        grid-gap: 80px;
+    }
+}
+@media (max-width: 1900px){
+    .container{
+        grid-template-columns: 300px 300px 300px 300px;
+        grid-gap: 60px;
+    }
+}
+@media (max-width: 1800px){
+    .container{
+        grid-template-columns: 300px 300px 300px;
+        grid-gap: 100px;
+    }
+}
+@media (max-width: 1500px){
+    .container{
+        grid-template-columns: 300px 300px 300px;
+        grid-gap: 90px;
+    }
+}
+@media (max-width: 1200px){
+    .container{
+        grid-template-columns: 300px 300px 300px;
+        grid-gap: 60px;
+    }
+}
+
+@media (max-width: 1000px){
+    .container{
+        grid-template-columns: 300px 300px;
+        grid-gap: 100px;
+    }
+}
+@media (max-width: 800px){
+    .container{
+        grid-template-columns: 300px 300px;
+        grid-gap: 70px;
+    }
+}
+@media (max-width: 700px){
+    .container{
+        grid-template-columns: 300px 300px;
+        grid-gap: 50px;
+    }
+}
+@media (max-width: 680px){
+    .container{
+        grid-template-columns: 300px;
+    }
+}
+@media (max-width: 500px){
+    body h1{
+        font-size: 45px;
+    }
+    body p{
+        font-size: 25px;
+    }
+}
+@media (max-width: 340px){
+    body h1{
+        font-size: 40px;
+    }
+    body p{
+        font-size: 20px;
+    }
+    .container{
+        grid-template-columns: 250px;
+    }
+    .card__image{
+        width: 200px;
+        height: 150px;
+    }
+}
+@media (max-width: 280px){
+    body h1{
+        font-size: 30px;
+    }
+    body p{
+        font-size: 18px;
+    }
+    .container{
+        grid-template-columns: 220px;
+    }
+    .card__image{
+        width: 180px;
+        height: 150px;
+    }
+}
+</style>
+</head>
+<body>
+<h1 style="text-align:center; color: black;">MENU CARD</h1>
+<p style="text-align: center;" class="icons" ><i class="fa fa-star" aria-hidden="true"></i>---<i class="fa fa-chevron-circle-down" aria-hidden="true"></i>---<i class="fa fa-star" aria-hidden="true"></i></p>
+<div class="flip-card">
+<div class="container">
+    <div class="card">
+      <img src="3.jpg" alt="MASALA TEA" class="card__image">
+      <p class="card__name">MASALA TEA</p>
+      <p class="card__name">20 Rs.</p>
+      <button class="btn draw-border">ADD TO CART</button>
+    </div>
+    <div class="card">
+      <img src="4.jpg" alt="GINGER TEA" class="card__image">
+      <p class="card__name">GINGER TEA</p>
+      <p class="card__name">30 Rs.</p>
+      <button class="btn draw-border">ADD TO CART</button>
+    </div>
+    <div class="card">
+      <img src="5.jpg" alt="GREEN TEA" class="card__image">
+      <p class="card__name">GREEN TEA</p>
+      <p class="card__name">40 Rs.</p>
+      <button class="btn draw-border">ADD TO CART</button>
+    </div>
+    <div class="card">
+      <img src="6.jpg" alt="LEMON TEA" class="card__image">
+      <p class="card__name">LEMON TEA</p>
+      <p class="card__name">50 Rs.</p>
+      <button class="btn draw-border">ADD TO CART</button>
+    </div>
+    <div class="card">
+      <img src="7.jpg" alt="ICED" class="card__image">
+      <p class="card__name">ICED TEA</p>
+      <p class="card__name">50 Rs.</p>
+      <button class="btn draw-border">ADD TO CART</button>
+    </div>
+    <div class="card">
+      <img src="8.jpg" alt="LIME WATER" class="card__image">
+      <p class="card__name">LIME WATER</p>
+      <p class="card__name">50 Rs.</p>
+      <button class="btn draw-border">ADD TO CART</button>
+    </div>
+    <div class="card">
+      <img src="9.jpg" alt="LIME SODA" class="card__image">
+      <p class="card__name">LIME SODA</p>
+      <p class="card__name">70 Rs.</p>
+      <button class="btn draw-border">ADD TO CART</button>
+    </div>
+    <div class="card">
+      <img src="10.jpg" alt="LATTE" class="card__image">
+      <p class="card__name">LATTE</p>
+      <p class="card__name">80 Rs.</p>
+      <button class="btn draw-border">ADD TO CART</button>
+    </div>
+    <div class="card">
+      <img src="11.jpg" alt="MOCHA" class="card__image">
+      <p class="card__name">MOCHA</p>
+      <p class="card__name">80 Rs.</p>
+      <button class="btn draw-border">ADD TO CART</button>
+    </div>
+    <div class="card">
+        <img src="12.jpg" alt="MINT MOJITO" class="card__image">
+        <p class="card__name">MINT MOJITO</p>
+        <p class="card__name">80 Rs.</p>
+        <button class="btn draw-border">ADD TO CART</button>
+    </div>
+    <div class="card">
+        <img src="13.jpg" alt="HOT CHOCOLATE" class="card__image">
+        <p class="card__name">HOT CHOCOLATE</p>
+        <p class="card__name">90 Rs.</p>
+        <button class="btn draw-border">ADD TO CART</button>
+    </div>
+    <div class="card">
+        <img src="14.jpg" alt="ORANGE MOJITO" class="card__image">
+        <p class="card__name">ORANGE MOJITO</p>
+        <p class="card__name">100 Rs.</p>
+        <button class="btn draw-border">ADD TO CART</button>
+    </div>
+    <div class="card">
+        <img src="15.jpg" alt="AMERICANO" class="card__image">
+        <p class="card__name">AMERICANO</p>
+        <p class="card__name">100 Rs.</p>
+        <button class="btn draw-border">ADD TO CART</button>
+    </div>
+    <div class="card">
+        <img src="16.jpg" alt="CAPPUCCINO" class="card__image">
+        <p class="card__name">CAPPUCCINO</p>
+        <p class="card__name">100 Rs.</p>
+        <button class="btn draw-border">ADD TO CART</button>
+    </div>
+    <div class="card">
+        <img src="17.jpg" alt="CAFE FRAPPE" class="card__image">
+        <p class="card__name">CAFE FRAPPE</p>
+        <p class="card__name">100 Rs.</p>
+        <button class="btn draw-border">ADD TO CART</button>
+    </div>
+    <div class="card">
+        <img src="18.jpg" alt="BLACK COFFEE" class="card__image">
+        <p class="card__name">BLACK COFFEE</p>
+        <p class="card__name">100 Rs.</p>
+        <button class="btn draw-border">ADD TO CART</button>
+    </div>
+    <div class="card">
+        <img src="19.jpg" alt="APPLE MOJITO" class="card__image">
+        <p class="card__name">APPLE MOJITO</p>
+        <p class="card__name">120 Rs.</p>
+        <button class="btn draw-border">ADD TO CART</button>
+    </div>
+    <div class="card">
+        <img src="20.jpg" alt="COLD COFFEE" class="card__image">
+        <p class="card__name">COLD COFFEE</p>
+        <p class="card__name">120 Rs.</p>
+        <button class="btn draw-border">ADD TO CART</button>
+    </div>
+    <div class="card">
+        <img src="21.jpg" alt="CRUNCHY FRAPPE" class="card__image">
+        <p class="card__name">CRUNCHY FRAPPE</p>
+        <p class="card__name">150 Rs.</p>
+        <button class="btn draw-border">ADD TO CART</button>
+    </div>
+    <div class="card">
+        <img src="22.jpg" alt="CORTADO COFFEE" class="card__image">
+        <p class="card__name">CORTADO COFFEE</p>
+        <p class="card__name">200 Rs.</p>
+        <button class="btn draw-border">ADD TO CART</button>
+    </div>
+  </div>
+  </body>
+  </html>
