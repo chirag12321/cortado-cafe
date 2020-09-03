@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT-US</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        } 
+        body {
+            background-color: darkseagreen;
+        }   
+        .header {
+            width: 100%;
+            height: 140px;
+            background-color: darksalmon;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+        }
+        .header img{
+            margin-right: 20px;
+            width: 130px;
+            height: 130px;
+        }
+        .header h1{
+                color: white;
+                font-size: 60px;
+                font-weight: normal;
+        }
+        .sidebar{
+            width: 20%;
+            position: fixed;
+            top: 170px;
+            height: 100%;
+            background-color: darksalmon;
+            border-radius: 15px;
+            left: -100%;
+            transition: 1s;
+        }
+        .sidebar ul{
+            list-style: none;
+        }
+        .sidebar ul li{
+            border-bottom: 3px solid black;
+        }
+        .sidebar ul li a{
+            display: block;
+            font-size: 30px;
+            text-decoration: none;
+            color: black;
+            padding: 10px;
+            transition: 2s;
+        }
+        .sidebar ul li a:hover{
+            border-left: 5px solid white;
+            color: white;
+            border-radius: 15px;
+            background-color: #101820FF;
+        }
+        .show-btn, .hide-btn{
+            position: fixed;
+            font-size: 65px;
+            top: 32px;
+            left: 50px;
+        }
+        .hide-btn{
+            opacity: 0;
+        }
+        #check{
+            display: none;
+        }
+        #check:checked~ .sidebar{
+            left: 0;
+        }
+        #check:checked~ .show-btn{
+            opacity: 0;
+        }
+        #check:checked~ .hide-btn{
+            opacity: 1;
+        }
+
+        .abt{
+            width: 100%;
+            height: 100vh;
+        }
+        .abt h1{
+            font-size: 100px;
+            border-top: 3px solid black;
+            border-bottom: 3px solid black;
+            color: white;
+            position: relative;
+            text-align: center;
+            top: 210px;
+        }
+        .abt h2{
+            color: #101820FF;
+            position: relative;
+            font-size: 45px;
+            top: 120px;
+            text-align: justify;
+            margin: 50px;
+        }
+        .abt h3{
+            font-size: 50px;
+            color: #fffdd0;
+            position: relative;
+            top: 170px;
+            text-align: center;
+            margin: 100px;
+        }
+        @media (max-width: 1750px){
+            .header{
+                height: 120px;
+            }
+            .header img{
+                width: 110px;
+                height: 110px;
+            }
+            .header h1{
+                font-size: 45px;
+            }
+            .sidebar{
+                top: 160px;
+            }
+            .sidebar ul li a{
+                font-size: 25px;
+            }
+            .show-btn, .hide-btn{
+                font-size: 50px;
+            }
+
+            .abt h1{
+                top: 150px;
+                font-size: 80px;
+            }
+            .abt h2{
+                top: 60px;
+                font-size: 30px;
+            }
+            .abt h3{
+                top: 110px;
+                font-size: 40px;
+            }
+        }
+        @media (max-width: 1500px){
+            .header{
+                height: 100px;
+            }
+            .header img{
+                width: 90px;
+                height: 90px;
+            }
+            .header h1{
+                font-size: 45px;
+            }
+            .show-btn, .hide-btn{
+                top: 25px;
+            }
+            .sidebar{
+                top: 120px;
+            }
+            .sidebar ul li a{
+                font-size: 20px;
+            }
+            #ques{
+                font-size: 50px;
+            }
+            .abt h3{
+                font-size: 38px;
+            }
+        }
+        @media (max-width: 1250px){
+            .header{
+                height: 100px;
+            }
+            .header img{
+                width: 90px;
+                height: 90px;
+            }
+            .header h1{
+                font-size: 45px;
+            }
+            .sidebar{
+                top: 120px;
+            }
+            .sidebar ul li a{
+                font-size: 20px;
+            }
+            .show-btn, .hide-btn{
+                top: 30px;
+                font-size: 40px;
+            }
+            .abt h3{
+                font-size: 34px;
+                margin-left: 80px;
+                margin-right: 80px;
+            }
+            .abt h2{
+                font-size: 25px;
+            }
+        }
+        @media (max-width: 1000px){
+
+            .header{
+                height: 90px;
+            }
+            .header img{
+                width: 80px;
+                height: 80px;
+            }
+            .header h1{
+                font-size: 40px;
+            }
+            .sidebar{
+                top: 110px;
+            }
+            .sidebar ul li a{
+                font-size: 20px;
+            }
+            .show-btn, .hide-btn{
+                font-size: 35px;
+            }
+            .abt h1{
+                top: 140px;
+                font-size: 60px;
+            }
+            .abt h2{
+                top: 50px;
+            }
+            .abt h3{
+                top: 80px;
+            }
+        }
+        @media (max-width: 875px){
+            .header h1{
+                display: none;
+            }
+        }
+        @media (max-width: 750px){
+            .header{
+                height: 90px;
+            }
+            .header img{
+                width: 80px;
+                height: 80px;
+            }
+            .sidebar{
+                top: 110px;
+                width: 100%;
+            }
+            .sidebar ul li a{
+                text-align: center;
+                font-size: 20px;
+            }
+            .show-btn, .hide-btn{
+                font-size: 35px;
+            }
+            .abt h3{
+                font-size: 28px;
+                margin-left: 35px;
+                margin-right: 35px;
+            }
+            .abt h2{
+                top: 40px;
+            }
+        }
+        @media (max-width: 500px){
+            .header img{
+                position: absolute;
+                right: 0;
+            }
+            .show-btn, .hide-btn{
+                left: 20px;
+            }
+            .abt h1{
+                font-size: 40px;
+            }
+            .abt h3{
+                font-size: 22px;
+            }
+            .abt h2{
+                top: 10px;
+                font-size: 20px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <input type="checkbox" name="" id="check">
+        <label for="check" class="show-btn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <label for="check" class="hide-btn">
+            <i class="fa fa-times"></i>
+        </label>
+        <div class="sidebar">
+            <ul>
+                <li><a href="index.html"><i class="fa fa-home"><span style="margin-left: 15px;">HOME</span></i></a></li>
+                <li><a href="menu.html"><i class="fa fa-minus-circle"><span style="margin-left: 15px;">MENU</span></i></a></li>
+                <li><a href="about.html"><i class="fa fa-user"><span style="margin-left: 15px;">ABOUT</span></i></a></li>
+                <li><a href="login.html"><i class="fa fa-sign-in"><span style="margin-left: 15px;">LOGIN</span></i></a></li>
+                <li><a href="contact.html"><i class="fa fa-id-card"><span style="margin-left: 15px;">CONTACT</span></i></a></li>
+            </ul>
+        </div>
+        <img src="1.jpg" alt="">
+        <h1>CORTADO CAFE</h1>
+    </div>   
+     <div class="content">
+            <div class="abt">
+                <h1>ABOUT-US</h1>
+                <h3>CORTADO CAFE located in MATHURA, City Of LORD KRISHNA. </h3>
+                <h2>
+                A cortado is a beverage consisting of espresso mixed with a roughly equal amount of warm milk to reduce the acidity. The milk in a cortado is steamed, but not frothy and "texturized" as in many Italian coffee drinks. We wanted to bring an element of Spain, Portugal, Latin America where people can come to relax, indulge and be themselves in an environment to match.
+                </h2>
+            </div>
+        </div>
+</body>
+</html>
