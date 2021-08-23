@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        body {
+            background: url(cafe3.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        * {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .container {
+            background-color: #a59079;
+            width: 50%;
+            height: 400px;
+            margin: 0 auto;
+            margin-top: 70px;
+            border: 2px solid black;
+            box-shadow: 5px white;
+        }
+
+        #container::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .container .left {
+            width: 40%;
+            height: 100%;
+            float: left;
+            background: url(../Images/logo.png);
+            background-size: cover;
+            box-sizing: border-box;
+        }
+
+
+        .container .right {
+            width: 60%;
+            height: 400px;
+            float: right;
+            box-sizing: border-box;
+        }
+
+        .container .right h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .formBox {
+            width: 100%;
+            height: 100%;
+            padding: 15px 40px;
+            box-sizing: border-box;
+        }
+
+        .formBox input {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .formBox input[type="text"],
+        .formBox input[type="password"] {
+            border: #a59079;
+            border-bottom: 2px solid black;
+            outline: none;
+            height: 25px;
+            margin-bottom: 15px;
+            border-radius: 15px;
+            padding-left: 20px;
+
+        }
+        .formBox a {
+            width: 70%;
+            display: block;
+            margin: 0 auto;
+            background: black;
+            text-align: center;
+            padding: 7px 2px;
+            border-radius: 15px;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 25px;
+
+
+        }
+
+        .formBox a:hover {
+            background-color: rgb(111, 78, 55);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left"></div>
+        <div class="right">
+            <h1>Register Yourself</h1>
+            <div class="formBox">
+                <input type="text" name="" placeholder="Full Name">
+                <input type="text" name="" placeholder="Email Address"><br>
+                <input type="text" name="" placeholder="Phone Number"><br>
+                <input type="password" name="" placeholder="Password"><br>
+                <input type="password" name="" placeholder="Confirm Password"><br>
+                <a href="login.html">Submit Details</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
